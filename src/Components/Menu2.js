@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-function Menu(props) {
+function Menu2(props) {
     const [readMore, setReadMore] = useState(false)
 
     const readMoreToggle = () => {
@@ -11,7 +11,7 @@ function Menu(props) {
 
 
     return (
-        <div id={props.element.id} className={`singleCard ${props.element.id}`}>
+        <div id={props.element.id} className={`singleCard2 ${props.element.id}`}>
             <div className="singleCardInitial">
                 <div>
                     {props.element.name}
@@ -28,7 +28,7 @@ function Menu(props) {
                     <h4>Street</h4><br />
                     {props.element.address.street} <br />
                 </div>
-                
+               
             </div>
             {!readMore? 
                     <div className='readMoreButton' onClick={readMoreToggle}>More</div>
@@ -82,4 +82,4 @@ function Menu(props) {
     )
 }
 
-export default Menu
+export default Menu2

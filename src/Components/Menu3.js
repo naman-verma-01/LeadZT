@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-function Menu(props) {
+function Menu3(props) {
     const [readMore, setReadMore] = useState(false)
 
     const readMoreToggle = () => {
@@ -11,7 +11,7 @@ function Menu(props) {
 
 
     return (
-        <div id={props.element.id} className={`singleCard ${props.element.id}`}>
+        <div id={props.element.id} className={`singleCard3 ${props.element.id}`}>
             <div className="singleCardInitial">
                 <div>
                     {props.element.name}
@@ -82,4 +82,4 @@ function Menu(props) {
     )
 }
 
-export default Menu
+export default Menu3
