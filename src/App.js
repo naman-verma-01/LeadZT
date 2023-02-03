@@ -3,14 +3,19 @@ import Menu from './Components/Menu';
 import { useDispatch, useSelector } from 'react-redux';
 import { SET_API_DATA } from './Reducers/types';
 import React, { useState, useEffect } from 'react';
+import Navbar from './Components/Navbar';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 
 function App() {
 
   const [data, setData] = useState()
   const [loading, setLoading] = useState(true)
+
   const dispatch = useDispatch()
   const apiData = useSelector((state) => state.api_data.data);
+
 
   const getApiData = async () => {
     let response = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -33,11 +38,15 @@ function App() {
   })
   return (
     <div className="App">
+      <Navbar />
+      <div style={{ height: "40vh" }}>
+        <div className='switchButton'>Switch Style</div>
+      </div>
       <div className="singleMenu">
         {!loading ?
           data.map((element) => {
             return <Menu element={element} />
-          }) : <>loading...</>}
+          }) : <Skeleton style={{height:"20vh",width:"50vw",margin:'10px'}} count={2}/>}
       </div>
     </div>
   );
