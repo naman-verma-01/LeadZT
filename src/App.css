@@ -91,6 +91,15 @@ body{
   cursor: pointer;
 }
 
+@media screen and (max-width: 500px) {
+  .switchButton{
+    left:40%
+  }
+  .readMoreButton{
+    left: 40%;
+  }
+}
+
 .singleCard2{
   
   width: 50vw;
@@ -115,7 +124,6 @@ body{
 @media screen and (max-width:800px) {
   .singleCard2{
     width: 90vw;
-    font-size: 11px;
   }
 }
 
@@ -154,7 +162,6 @@ body{
 @media screen and (max-width:800px) {
   .singleCard3{
     width: 90vw;
-    font-size: 11px;
   }
 }
 
