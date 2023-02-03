@@ -41,8 +41,7 @@ body{
 @media screen and (max-width:800px) {
   .singleCard{
     width: 90vw;
-    font-size: 11px;
-  }
+    }
 }
 
 @media screen and (max-width:550px) {
